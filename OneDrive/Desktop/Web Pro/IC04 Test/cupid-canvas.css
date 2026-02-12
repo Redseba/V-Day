@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap');
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Great Vibes', 'Poppins', sans-serif;
+  background-color: var(--cupid-pink);
+  align-items: center;
+  justify-content: center;
+}
+
 /* Valentine's Day Color Palette & Variables */
 :root {
   --cupid-pink: #ffafcc;
@@ -40,4 +66,25 @@
 
 .heart {
   animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0; 
+        transform: translateX(-100px); 
+    }
+
+    100% {
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+.animated-heading {
+    animation: fadeInSlide 2s ease-out forwards;   
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding-top: 50px;
 }
