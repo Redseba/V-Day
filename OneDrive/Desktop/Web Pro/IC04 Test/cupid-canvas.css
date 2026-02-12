@@ -20,8 +20,12 @@
 * {
   font-family: 'Great Vibes', 'Poppins', sans-serif;
   background-color: var(--cupid-pink);
+  box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
 }
 
 /* Valentine's Day Color Palette & Variables */
@@ -87,4 +91,64 @@
     color: #333;
     text-align: center;
     padding-top: 50px;
+}
+
+/* Header */
+header{
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  background-color: var(--cupid-pink);
+  backdrop-filter: blur(8px);
+  padding: 20px 24px;
+  border-radius: 48px;
+  z-index: 1000;
+  border: 2px solid var(--chocolate);
+}
+
+.logo{
+  font-size: 20px;
+  font-weight: 600;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+}
+
+.logo:hover{
+  transform: scale(1.1);
+}
+
+.nav-links{
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-links li a{
+  position: relative;
+  font-weight: 300;
+}
+
+.nav-links li a::before{
+  position: absolute;
+  content: '';
+  width: 0;
+  left: 0;
+  height: 5px;
+  top: 25px;
+  border-radius: 16px;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(to right, var(--valentine-red), var(--love-purple));
+}
+
+.nav-links li a.visit-btn::before{
+  background: none;
+}
+
+.nav-links li a:hover::before{
+  width: 100%;
 }
