@@ -1,3 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap');
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Great Vibes', 'Poppins', sans-serif;
+  background-color: var(--cupid-pink);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
 /* Valentine's Day Color Palette & Variables */
 :root {
   --cupid-pink: #ffafcc;
@@ -40,4 +70,85 @@
 
 .heart {
   animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0; 
+        transform: translateX(-100px); 
+    }
+
+    100% {
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+.animated-heading {
+    animation: fadeInSlide 2s ease-out forwards;   
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Header */
+header{
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  background-color: var(--cupid-pink);
+  backdrop-filter: blur(8px);
+  padding: 20px 24px;
+  border-radius: 48px;
+  z-index: 1000;
+  border: 2px solid var(--chocolate);
+}
+
+.logo{
+  font-size: 20px;
+  font-weight: 600;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+}
+
+.logo:hover{
+  transform: scale(1.1);
+}
+
+.nav-links{
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-links li a{
+  position: relative;
+  font-weight: 300;
+}
+
+.nav-links li a::before{
+  position: absolute;
+  content: '';
+  width: 0;
+  left: 0;
+  height: 5px;
+  top: 25px;
+  border-radius: 16px;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(to right, var(--valentine-red), var(--love-purple));
+}
+
+.nav-links li a.visit-btn::before{
+  background: none;
+}
+
+.nav-links li a:hover::before{
+  width: 100%;
 }
