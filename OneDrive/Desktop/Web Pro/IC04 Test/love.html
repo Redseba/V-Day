@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cupid-canvas1.css">
+
+    <style>
+        #patrick {
+            animation-fill-mode: forwards;
+            animation: movePatrick 2s 1;
+        }
+        #heart {
+            animation-fill-mode: forwards;
+            animation: moveHeart 2s 1;
+        }
+        #car {
+            animation-fill-mode: forwards;
+            animation: moveHeart 2s 1;
+        }
+
+        @keyframes movePatrick {
+            0% {
+                transform:translate(0px, 0px);
+            }
+            100% {
+                transform:translate(300px, 0px);}
+        }
+
+        @keyframes moveHeart {
+            0% {
+                transform:translate(50px, 0px);
+            }
+            100% {transform: scaleX(-1);
+                transform:translate(450px, 0px);}
+        }
+        @keyframes moveCar {
+            0% {
+                transform:translate(-180px, 0px);
+            }
+            100% {
+                transform:translate(450px, 0px);}
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="love.html">Love's Beginning</a>
+            <a href="cupid.html">Cupid's Garden</a>
+            <a href="eternal.html">Eternal Romance</a>
+        </nav>
+    </header>
+
+    <img class = "bg" src="assets/images/Background.png" alt="Background for page">
+    <img class = "imgc" src="assets/images/boat.png" id = "car" alt="The boatmobile">
+    <img class = "imgp" src="assets/images/Patrick.png" id = "patrick" alt="Patrick Star Himself">
+    <img class = "imgh" src="assets/images/heart-man.png" id = "heart" alt="I defy you heartman">
+
+    
+</body>
+</html>

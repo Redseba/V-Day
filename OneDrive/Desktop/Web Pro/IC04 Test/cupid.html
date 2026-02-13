@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #patrick {
+            animation-fill-mode: forwards;
+            animation: movePatrick 2s 1;
+        }
+        #heart {
+            animation-fill-mode: forwards;
+            animation: moveHeart 2s 1;
+        }
+
+        #conf {
+            animation-fill-mode: forwards;
+            animation: moveConf 6s 1;
+        }
+
+
+
+        @keyframes movePatrick {
+            0% {
+                transform:translate(0px, 0px);
+            }
+            100% {
+                transform:translate(300px, 0px);}
+        }
+
+        @keyframes moveHeart {
+            0% {
+                transform:translate(50px, 0px);
+            }
+            100% {transform: scaleX(-1);
+                transform:translate(450px, 0px);
+            }
+        }
+
+        @keyframes moveConf {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            100% {
+                transform: translateY(0px, 600px);
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="cupid-canvas2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="love.html">Love's Beginning</a>
+            <a href="cupid.html">Cupid's Garden</a>
+            <a href="eternal.html">Eternal Romance</a>
+        </nav>
+    </header>
+
+    <img class = "bg" src="assets/images/Background.png" alt="Background for page">
+    <img class = "imgf" src="assets/images/flower_shop.png" id = "flower" alt="The flowershop">
+    <img class = "imgp" src="assets/images/Patrick.png" id = "patrick" alt="Patrick Star Himself">
+    <img class = "imgh" src="assets/images/heart-man.png" id = "heart" alt="I defy you heartman">
+    <img class = "imgw" src="assets/images/wave.png" alt="Spongebob Waving">
+    <img class = "imgc" src="assets/images/conf.png" id = "conf" alt="Confetti">
+</body>
+</html>

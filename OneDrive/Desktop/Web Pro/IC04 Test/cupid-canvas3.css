@@ -1,0 +1,193 @@
+/* Valentine's Day Color Palette & Variables */
+:root {
+  --cupid-pink: #ffafcc;
+  --valentine-red: #ff4d6d;
+  --love-purple: #c77dff;
+  --chocolate: #7b3f00;
+  --vanilla: #fffaf0;
+  
+  /* Spacing Variables */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 2rem;
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+  }
+}
+
+/* CSS-only page navigation with :target */
+.page {
+  display: none;
+}
+
+.page:target {
+  display: block;
+}
+
+/* Heart animation example */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.heart {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.bg {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  margin: none;
+}
+
+.p {
+  width: 20vw;
+  height: 30vh;
+  position: absolute;
+  margin-top: 68vh;
+  animation: movePatrick 2s 1;
+  animation-fill-mode: forwards;
+}
+
+.hm {
+  width: 20vw;
+  height: 30vh;
+  position: absolute;
+  margin-top: 68vh;
+  margin-left: 20vw;
+  transform: scaleX(-1);
+  animation: moveHeart 2s 1;
+  animation-fill-mode: forwards;
+}
+
+.bd {
+  width: 40vw;
+  height: 30vh;
+  position: absolute;
+  margin-top: 45vh;
+}
+
+.bd2 {
+  width: 40vw;
+  height: 30vh;
+  position: absolute;
+  margin-top: 45vh;
+  margin-left: 60vw
+}
+
+.d {
+  margin-left: 75vh;
+  width: 15vw;
+  height: 15vh;
+  position: absolute;
+  transform: scaleX(-1);
+  animation: movedove 2s 1 forwards;
+}
+
+.c {
+  width: 10vw;
+  height: 10vh;
+  position: absolute;
+  margin-top: 10vh;
+  animation: movecupid 2s 1 forwards;
+}
+
+.hmc1 {
+  width: 20vw;
+  height: 30vh;
+  position: absolute;
+  margin-top: 68vh;
+  margin-left: 40vw;
+  opacity: 0;
+  animation: fadeInOut 1s 1.5s forwards;
+}
+
+.hmc2 {
+  width: 20vw;
+  height: 30vh;
+  position: absolute;
+  margin-top: 68vh;
+  margin-left: 40vw;
+  opacity: 0;
+  animation: fadeInOut 1s 2.8s forwards;
+}
+
+.hmc3 {
+  width: 20vw;
+  height: 30vh;
+  position: absolute;
+  margin-top: 68vh;
+  margin-left: 40vw;
+  opacity: 0;
+  animation: in 1s 4s forwards;
+}
+
+@keyframes movePatrick {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: translate(550px, 0px);
+  }
+}
+
+@keyframes movedove {
+  0% {
+    transform: translate(0px, 0px) scaleX(-1);
+  }
+  100%{
+    transform: translate(550px, 0px) scale(0);
+  }
+}
+
+@keyframes movecupid {
+  0% {
+    transform: translate(0px, 0px) scaleX(-1);
+  }
+  100%{
+    transform: translate(550px, 0px);
+  }
+}
+
+@keyframes moveHeart {
+  0% {
+    opacity: 1;
+    transform: translate(50px, 0px);
+  }
+  100%{
+    opacity: 0;
+    transform: translate(450px, 0px);
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+
+@keyframes in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
